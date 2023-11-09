@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeatherApp1</name>
+    </assembly>
+    <members>
+        <member name="T:WeatherApp1.Models.ViewModel.WeatherInfoVM">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.SearchCity">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.searchCity"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.WeatherIcon">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.weatherIcon"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.Temperature">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.temperature"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.WeatherName">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.weatherName"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.Location">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.location"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.Wind">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.wind"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.Humidity">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.humidity"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.MinTemp">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.minTemp"/>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.MaxTemp">
+            <inheritdoc cref="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.maxTemp"/>
+        </member>
+        <member name="F:WeatherApp1.Models.ViewModel.WeatherInfoVM.fetchWeatherInfoCommand">
+            <summary>The backing field for <see cref="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.FetchWeatherInfoCommand"/>.</summary>
+        </member>
+        <member name="P:WeatherApp1.Models.ViewModel.WeatherInfoVM.FetchWeatherInfoCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WeatherApp1.Models.ViewModel.WeatherInfoVM.FetchWeatherInfo"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SearchCity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SearchCity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WeatherIcon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WeatherIcon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Temperature">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Temperature" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.WeatherName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "WeatherName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Location">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Location" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Wind">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Wind" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Humidity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Humidity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MinTemp">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MinTemp" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MaxTemp">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MaxTemp" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SearchCity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SearchCity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WeatherIcon">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WeatherIcon" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Temperature">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Temperature" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.WeatherName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "WeatherName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Location">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Location" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Wind">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Wind" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Humidity">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Humidity" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MinTemp">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MinTemp" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MaxTemp">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MaxTemp" generated properties.</summary>
+        </member>
+    </members>
+</doc>
