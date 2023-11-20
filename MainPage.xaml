@@ -7,102 +7,96 @@
              x:DataType="vm:WeatherInfoVM"
              Title="Weather Information">
     <ContentPage.Background>
+        <!-- Background gradient for a visually appealing look -->
         <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="#606cf2"
-                          Offset="0.01" />
-            <GradientStop Color="#2C0F86"
-                          Offset="1.0" />
+            <GradientStop Color="#606cf2" Offset="0.01" />
+            <GradientStop Color="#2C0F86" Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    <Grid
-        VerticalOptions="FillAndExpand"
-        RowDefinitions="Auto,Auto,Auto,Auto,*"
-        RowSpacing="10">
-        
-        <!--Search Section-->
-        <StackLayout Grid.Row="0"
-                     Margin="20,20,20,0"
-                     Orientation="Horizontal">
-            <Entry Placeholder="Search city" 
-                   Text="{Binding SearchCity}"
-                   TextColor="GhostWhite"
-                   HorizontalOptions="FillAndExpand"/>
-            <Button Text="Get weather"
-                    Command="{Binding FetchWeatherInfoCommand}"
+    <Grid VerticalOptions="FillAndExpand"
+          RowDefinitions="Auto,Auto,Auto,Auto,*"
+          RowSpacing="10">
+
+        <!-- Search Section -->
+        <StackLayout Grid.Row="0" Margin="20,20,20,0" Orientation="Horizontal">
+            <!-- Entry for city search -->
+            <Entry Placeholder="Search city" Text="{Binding SearchCity}"
+                   TextColor="GhostWhite" HorizontalOptions="FillAndExpand"/>
+            <!-- Button to fetch weather -->
+            <Button Text="Get weather" Command="{Binding FetchWeatherInfoCommand}"
                     HorizontalOptions="End" Margin="20,0,0,0"
                     BackgroundColor="Navy" TextColor="White"/>
         </StackLayout>
-        
-        <!--Main Section-->
-        <StackLayout Grid.Row="1"
-                     Padding="20">
+
+        <!-- Main Section -->
+        <StackLayout Grid.Row="1" Padding="20">
             <Grid ColumnDefinitions="Auto,*">
-                <skia:SKLottieView
-                    x:Name="weatherIcon"
-                    Source="{Binding WeatherIcon}"
-                  RepeatCount="-1"
-                  HeightRequest="200"
-                  WidthRequest="200"
-                  HorizontalOptions="Center" />
+                <!-- Weather icon -->
+                <skia:SKLottieView x:Name="weatherIcon" Source="{Binding WeatherIcon}"
+                                  RepeatCount="-1" HeightRequest="200" WidthRequest="200"
+                                  HorizontalOptions="Center" />
                 <StackLayout Grid.Column="1" HorizontalOptions="End">
-                    <Label Text="{Binding Temperature}"
-                           HorizontalOptions="End"
+                    <!-- Temperature -->
+                    <Label Text="{Binding Temperature}" HorizontalOptions="End"
                            FontSize="60" FontAttributes="Bold"
                            TextColor="GhostWhite"/>
-                    <Label Text="{Binding WeatherName}"
-                           HorizontalOptions="End"
+                    <!-- Weather description -->
+                    <Label Text="{Binding WeatherName}" HorizontalOptions="End"
                            FontSize="25" FontAttributes="Bold"
                            TextColor="GhostWhite"/>
-                    <StackLayout Orientation="Horizontal"
-                                 Padding="0,30,0,0" HorizontalOptions="End">
+                    <StackLayout Orientation="Horizontal" Padding="0,30,0,0" HorizontalOptions="End">
+                        <!-- Location -->
                         <Image Source="nav_icon.png" HeightRequest="25" Margin="0,0,10,0"/>
-                        <Label x:Name="lblCityCountry"
-                                   Text="{Binding Location}"
-                                   FontSize="18"
-                                   VerticalOptions="Center"
-                                   HorizontalOptions="End"
-                                   TextColor="GhostWhite"/>
+                        <Label x:Name="lblCityCountry" Text="{Binding Location}" FontSize="18"
+                               VerticalOptions="Center" HorizontalOptions="End"
+                               TextColor="GhostWhite"/>
                     </StackLayout>
-        </StackLayout>
+                </StackLayout>
             </Grid>
         </StackLayout>
-        
-        <!--Wind and Precipitation Section-->
-        <StackLayout Grid.Row="2"
-                     Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+        <!-- Wind and Precipitation Section -->
+        <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
             <Grid ColumnDefinitions="110,110,110" ColumnSpacing="10">
+                <!-- Wind Frame -->
                 <Frame Grid.Column="0" BackgroundColor="GhostWhite" CornerRadius="10">
-                    <StackLayout Orientation="Vertical" 
-         Spacing="0" Padding="0,5,0,0">
+                    <StackLayout Orientation="Vertical" Spacing="0" Padding="0,5,0,0">
                         <Image Source="wind.png" WidthRequest="45" Margin="0,0,0,10"/>
                         <StackLayout HorizontalOptions="CenterAndExpand" Spacing="7">
-                            <Label Text="{Binding Wind}" FontSize="15"
-                                   FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Wind}" FontSize="15" FontAttributes="Bold"
+                                   HorizontalOptions="Center"/>
                             <Label Text="Wind" HorizontalOptions="Center"/>
                         </StackLayout>
                     </StackLayout>
                 </Frame>
+                <!-- Precipitation Frame -->
                 <Frame Grid.Column="1" BackgroundColor="GhostWhite" CornerRadius="10">
                     <StackLayout Orientation="Vertical" Spacing="0" Padding="0,0,0,0">
                         <Image Source="precipitation.png" WidthRequest="60"/>
                         <StackLayout HorizontalOptions="CenterAndExpand" Spacing="7">
-                            <Label Text="{Binding Humidity}" FontSize="15"
-        FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Humidity}" FontSize="15" FontAttributes="Bold"
+                                   HorizontalOptions="Center"/>
                             <Label Text="Humidity" HorizontalOptions="Center"/>
                         </StackLayout>
                     </StackLayout>
                 </Frame>
+                <!-- Temperature Frame -->
                 <Frame Grid.Column="2" BackgroundColor="GhostWhite" CornerRadius="10">
-                    <StackLayout Orientation="Vertical"
-Spacing="0" Padding="0,5,0,0">
+                    <StackLayout Orientation="Vertical" Spacing="0" Padding="0,5,0,0">
                         <Label HorizontalOptions="Center" Text="Max Temp"/>
-                        <Label HorizontalOptions="Center" Text="{Binding MaxTemp}" FontSize="25" FontAttributes="Bold"/>
+                        <Label HorizontalOptions="Center" Text="{Binding MaxTemp}"
+                               FontSize="25" FontAttributes="Bold"/>
                         <Label HorizontalOptions="Center" Text="Min Temp"/>
-                        <Label HorizontalOptions="Center" Text="{Binding MinTemp}" FontSize="25" FontAttributes="Bold"/>
+                        <Label HorizontalOptions="Center" Text="{Binding MinTemp}"
+                               FontSize="25" FontAttributes="Bold"/>
                     </StackLayout>
                 </Frame>
             </Grid>
         </StackLayout>
+
+        <!-- Author Name -->
+        <Label Text="Author: Sakshi Sheth" HorizontalOptions="End"
+               VerticalOptions="End" TextColor="White" Margin="0,0,10,10"/>
     </Grid>
 </ContentPage>
